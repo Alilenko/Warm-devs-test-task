@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <div class="wrapper">
+      <div>
+        <button id="open_modal" class="button">Open Form</button>
+      </div>
+      <div id="modal-bg" class="modal-bg"></div>
+      <div id="modal" class="modal">
+        <div class="close">
+          <img id="close-btn" src="./assets/close-button 1.svg" alt="close" />
+        </div>
+
+        <div class="content">
+          <form
+            id="form"
+            class="form"
+            action="https://formsubmit.co/pavlenkoalina9694@gmail.com"
+            method="POST"
+          >
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Name"
+              class="name"
+            />
+            <span id="error-name" class="error-message"></span>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Email Adress"
+              class="email"
+            />
+            <span id="error-email" class="error-message"></span>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="Phone number"
+              class="phone"
+            />
+            <span id="error-phone" class="error-message"></span>
+            <button id="submit-btn" type="submit" class="submit_btn">
+              Submit
+            </button>
+            <p id="successMessage" class="success__message">
+              Form submitted successfully
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    position: relative;
+    font-weight: 400;
+}
+html.modal-active, body.modal-active {
+    overflow: hidden;
+}
+.wrapper{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.button{
+    padding: 10px 20px;
+    min-width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(#fee86b, #ffce00);
+    border: 1px solid #ffce00;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.modal {
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 20px 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ffce00;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+.modal.open{
+    overflow: visible;
+    opacity: 100%;
+    z-index: 2;
+}
+
+ .modal-bg {
+     position: fixed;
+     overflow: hidden;
+     opacity: 0;
+     top: 0; left: 0; right: 0; bottom: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    background: rgba(0, 0, 0, .3);
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+ }
+ .modal-bg.open{
+     opacity: 100%;
+     overflow: visible;
+     z-index: 1;
+     
+ }
+ .close{
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     cursor: pointer;
+     width: 24px;
+     height: 24px;
+
+ }
+.content {
+    min-height: 100%;
+    height: 100%;
+
+    padding: 40px;
+    position: relative;
+    z-index: 0;
+}
+.content h1 {
+    padding: 75px 0 30px 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+    color: #A0A6A3;
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .7);
+    margin-top: 20px;
+    min-width: 280px;
+    
+  }
+  .submit_btn{
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    background-color: #ffce00;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: linear-gradient(-90deg, #ffce00, #fee86b);
+    box-shadow: 1px 5px 9px rgba(211, 211, 211, .9);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .error-message{
+    color: red;
+    font-size: 14px;
+    padding-left: 2px;
+  }
+  .success__message{
+      color: green;
+      margin-top: 5px;
+      text-align: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+  }
