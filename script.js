@@ -27,9 +27,9 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const isNameValid = validateForm(e, "name", "error-name");
-  const isEmailValid = validateForm(e, "email", "error-email");
-  const isPhoneValid = validateForm(e, "phone", "error-phone");
+  const isNameValid = validateForm("name", "error-name");
+  const isEmailValid = validateForm("email", "error-email");
+  const isPhoneValid = validateForm("phone", "error-phone");
 
   if (isNameValid && isEmailValid && isPhoneValid) {
     successMessage.style.visibility = "visible";
